@@ -26,6 +26,11 @@
             background-image: url("../img/hero.jpg");
             background-position: center;
             background-size: cover;
+
+            // background-image{
+            //        filter: blur(8px);
+            //     -webkit-filter: blur(8px);
+            // }
             
             #hero-content{
                 color:$white;
