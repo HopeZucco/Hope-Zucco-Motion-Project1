@@ -10,10 +10,10 @@ import { gsap } from "gsap";
 
 //keyword referenceName assignmentOperator value
 
-//1.	Names can contain letters, digits, underscores, and dollar signs.
-//2.	Names must begin with a letter or can also begin with $ and _
-//3.	Names are case sensitive (y and Y are different variables)
-//4.	Reserved words (like JavaScript keywords) cannot be used as names
+//1.    Names can contain letters, digits, underscores, and dollar signs.
+//2.    Names must begin with a letter or can also begin with $ and _
+//3.    Names are case sensitive (y and Y are different variables)
+//4.    Reserved words (like JavaScript keywords) cannot be used as names
 
 
 //gsap.to(duration vars )
@@ -40,11 +40,18 @@ import { gsap } from "gsap";
 
 const mainTL = gsap.timeline();
 
+// mainTL
+// .from("#hero article", {duration:2, yPercent:50})
+// .from("#hero h2", {duration:0.5, y:200, rotation:180, color:"#ec6602", alpha:0}, "herotext")
+// .from("#hero h1", {duration:0.5, y:"+=200", rotation:180, alpha:0}, "herotext")
 mainTL
+.from(".cupMove", {duration:.75,xPercent:-50, rotation:360, alpha:0})
 .from("#hero article", {duration:2, yPercent:50})
-.from("#hero h2", {duration:0.5, y:200, rotation:180, color:"#ec6602", alpha:0}, "herotext")
-.from("#hero h1", {duration:0.5, y:"+=200", rotation:180, alpha:0}, "herotext")
-
-
+.from("#hero h2", {duration:0.5, y:200, yPercent:50, color:"#ec6602", alpha:0}, "herotext")
+.from("#hero h1", {duration:0.5, y:"+=200", yPercent:50, alpha:0}, "herotext")
+.from(".coffeehead", {duration:.5,xPercent:50, alpha:0})
+.from(".coffeecontent", {duration:.5,xPercent:50, alpha:0})
 
 ;
+
+
